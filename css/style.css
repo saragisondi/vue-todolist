@@ -7,4 +7,47 @@
 
 body{
   font-family:'Roboto', sans-serif;;
+  background-color:#EBC3CB ;
 }
+
+li{
+  margin: 45px 50px;
+  list-style: none;
+}
+
+/*HEADER*/
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-title{
+  background-color: whitesmoke;
+  border-radius: 20px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 80px;
+  color:#BD5D5D;
+}
+
+/*MAIN*/
+main{
+  display: flex;
+  justify-content: center;
+}
+
+.container-list{
+  width: 30%;
+  height:650px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
