@@ -6,15 +6,15 @@ data(){
    lists:
      [
       {
-        text:'lista spesa',
+        text:'Lista spesa',
         done: false,
       },
       {
-        text:'lista',
+        text:'Lista',
         done: true,
       },
       {
-        text:'spesa',
+        text:'Spesa',
         done: false,
       }
     ]

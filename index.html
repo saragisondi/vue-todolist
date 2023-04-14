@@ -30,18 +30,27 @@
     </div>
   </header>
 
+  <div class="input">
+    <input type="text" placeholder= "devo fare......">
+    <button><i class="fa-solid fa-plus"></i></button>
+  </div>
+
     <main>
       <div class="container-list">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+
+        <ul >
+          
+          <div class="title-list">
+            <h3>You can do it</h3>
+            <h3>Check</h3>
+          </div>
+
+          <!-- faccio un ciclo per visualizzare gli elementi della lista -->
+          <li v-for="list in lists">
+            <span> {{list.text}}</span>
+            <span> <i class="fa-regular fa-square"></i></span>
+          </li>
+          
         </ul>
       </div>
     </main>
