@@ -17,7 +17,7 @@ data(){
         text:'Spesa',
         done: false,
       }
-    ]
+    ],
   }
 },
 

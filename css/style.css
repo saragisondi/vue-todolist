@@ -18,6 +18,10 @@ li{
 
 }
 
+.decoration{
+  text-decoration: line-through;
+}
+
 /*HEADER*/
 header{
   display: flex;

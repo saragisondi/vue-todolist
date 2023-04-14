@@ -47,7 +47,9 @@
 
           <!-- faccio un ciclo per visualizzare gli elementi della lista -->
           <li v-for="list in lists">
-            <span> {{list.text}}</span>
+            <!-- faccio un if per verificare quale oggetto della lista è già stato fatto -->
+            <span v-if="list.done === true" class="decoration"> {{list.text}}</span>
+            <span v-else="list.done === false" > {{list.text}}</span>
             <span> <i class="fa-regular fa-square"></i></span>
           </li>
           
