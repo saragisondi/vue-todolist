@@ -32,7 +32,7 @@
   </header>
 
   <div class="input">
-    <input v-model="" type="text" placeholder= "devo fare......">
+    <input class="input-text" type="text" placeholder= "devo fare......">
     <button><i class="fa-solid fa-plus"></i></button>
   </div>
 
@@ -60,11 +60,11 @@
             </span> 
 
             <span > 
+              
               <!-- fatto -->
-              <i 
-              :class="square" 
-              class="fa-regular fa-square">
-              </i> 
+              <input v-model="list.done" 
+              type="checkbox" name="checkbox" id="checkbox"> 
+              
               <!-- cestino -->
               <i 
               @click="deleteRow(i)" 

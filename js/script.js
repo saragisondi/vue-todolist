@@ -38,9 +38,9 @@ methods:{
 //creo una funzione per cancellare la riga al click del cestino
   deleteRow(i){
     this.lists.splice(i,1);
-  }
+  },
+  
 }
-
 
 
 }).mount('#app')
