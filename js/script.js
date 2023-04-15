@@ -3,8 +3,8 @@ const {createApp} = Vue;
 createApp({
 data(){
   return{
-   lists:
-     [
+  lists:
+    [
       {
         text:'Lista spesa',
         done: false,
@@ -16,13 +16,30 @@ data(){
       {
         text:'Spesa',
         done: false,
-      }
+      },
+      {
+        text:'Lista',
+        done: true,
+      },
+      {
+        text:'Lista',
+        done: true,
+      },
     ],
+    newToDo: '',
+    
   }
 },
 
 
+methods:{
 
+
+//creo una funzione per cancellare la riga al click del cestino
+  deleteRow(i){
+    this.lists.splice(i,1);
+  }
+}
 
 
 

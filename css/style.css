@@ -15,11 +15,16 @@ li{
   list-style: none;
   display: flex;
   justify-content: space-between;
-
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
 }
 
 .decoration{
   text-decoration: line-through;
+}
+
+.d-none{
+  display: none;
 }
 
 /*HEADER*/
@@ -61,6 +66,7 @@ input{
   border-color:#BD5D5D;
   border-radius: 5px;
   color: whitesmoke;
+  cursor: pointer;
 }
 
 .input{
@@ -69,6 +75,7 @@ justify-content: center;
 align-items: center;
 margin-bottom: 10px;
 margin: 20px 0;
+
 }
 
 
@@ -77,6 +84,13 @@ main{
   display: flex;
   justify-content: center;
 }
+
+main i{
+  font-size: 20px;
+  margin: 0 3px;
+  }
+  
+  
 .title-list{
   display: flex;
   justify-content: center;
@@ -85,7 +99,7 @@ main{
 }
 
 .title-list h3:first-child {
-  width: 80%;
+  width: 70%;
 }
 
 .container-list{
@@ -95,8 +109,14 @@ main{
   border-radius: 20px;
 }
 
-.fa-regular{
-font-size: 20px;
-
+.fa-regular.fa-square:hover{
+  color:#BD5D5D;
+  cursor: pointer;
 }
 
+
+
+.fa-solid.fa-trash-can:hover{
+  color: red;
+  cursor: pointer;
+}

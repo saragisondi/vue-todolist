@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
   <title>TO DO LIST</title>
 </head>
@@ -31,7 +32,7 @@
   </header>
 
   <div class="input">
-    <input type="text" placeholder= "devo fare......">
+    <input v-model="" type="text" placeholder= "devo fare......">
     <button><i class="fa-solid fa-plus"></i></button>
   </div>
 
@@ -46,15 +47,37 @@
           </div>
 
           <!-- faccio un ciclo per visualizzare gli elementi della lista -->
-          <li v-for="list in lists">
-            <!-- faccio un if per verificare quale oggetto della lista è già stato fatto -->
-            <span v-if="list.done === true" class="decoration"> {{list.text}}</span>
-            <span v-else="list.done === false" > {{list.text}}</span>
-            <span> <i class="fa-regular fa-square"></i></span>
+          <li v-for="(list,i) in lists">
+
+            <!-- condizione true -->
+            <span v-if="list.done === true" class="decoration" >
+              {{list.text}}
+            </span>
+
+            <!-- condizione false -->
+            <span v-else="list.done === false" > 
+              {{list.text}}
+            </span> 
+
+            <span > 
+              <!-- fatto -->
+              <i 
+              :class="square" 
+              class="fa-regular fa-square">
+              </i> 
+              <!-- cestino -->
+              <i 
+              @click="deleteRow(i)" 
+              class="fa-solid fa-trash-can">
+              </i>
+            </span> 
+
           </li>
           
         </ul>
+
       </div>
+
     </main>
 
 
