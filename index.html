@@ -32,8 +32,15 @@
   </header>
 
   <div class="input">
-    <input class="input-text" type="text" placeholder= "devo fare......">
-    <button><i class="fa-solid fa-plus"></i></button>
+
+    <input
+    @keyup.enter="NewToDo" 
+    v-model.trim="AddToDo" class="input-text" type="text" placeholder= "devo fare......">
+
+    <button @click="NewToDo">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
   </div>
 
     <main>
@@ -60,7 +67,7 @@
             </span> 
 
             <span > 
-              
+
               <!-- fatto -->
               <input v-model="list.done" 
               type="checkbox" name="checkbox" id="checkbox"> 
