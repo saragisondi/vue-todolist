@@ -1,0 +1,44 @@
+/*GENERAL*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(0, 128, 0, 0.811) ;
+}
+
+/*HEADER*/
+header{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgba(255, 255, 0, 0.947) ;
+}
+
+
+.container-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+header input{
+  border: 2px solid rgba(255, 255, 0, 0.947);
+  border-radius:5px;
+  padding: 4px 20px;
+}
+
+header button{
+  background-color: rgba(255, 255, 0, 0.947);
+  border-color: rgba(255, 255, 0, 0.947);
+  padding:  4px 5px;
+  margin: 0 5px;
+  font-size: 15px;
+  border-radius:5px
+}
