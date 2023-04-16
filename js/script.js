@@ -6,23 +6,23 @@ data(){
   lists:
     [
       {
-        text:'Lista spesa',
+        text:'Fare la spesa',
         done: false,
       },
       {
-        text:'Lista',
+        text:'Finire Esercizi Vue',
         done: true,
       },
       {
-        text:'Spesa',
+        text:'Fare la Lavatrice',
         done: false,
       },
       {
-        text:'Lista',
+        text:'Fare bagnetto a Nedo',
         done: true,
       },
       {
-        text:'Lista',
+        text:'Comprare crocchette per Nedo',
         done: true,
       },
     ],
