@@ -20,6 +20,11 @@ header{
   color: rgba(255, 255, 0, 0.947) ;
 }
 
+li{
+  margin: 30px 50px;
+  list-style-type: style square;
+  color:rgba(0, 0, 0, 0.9) ;
+}
 
 .container-input{
   display: flex;
@@ -41,4 +46,19 @@ header button{
   margin: 0 5px;
   font-size: 15px;
   border-radius:5px
+}
+
+/*MAIN*/
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-list{
+  background-color: rgba(245, 245, 245, 0.971);
+  border: 5px solid rgba(255, 255, 0, 0.947);
+  width:650px;
+  height: 650px;
+  border-radius: 10px;
 }
