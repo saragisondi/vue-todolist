@@ -33,8 +33,8 @@
         <div>Lista Spesa <i class="fa-solid fa-basket-shopping"></i></div>
         
         <div class="container-input">        
-          <input type="text" placeholder=" devo prendere.... ">
-          <button>aggiungi</button>
+          <input @keyup.enter="addNew" v-model.trim="toDo" type="text" placeholder=" devo prendere.... ">
+          <button @click="addNew">aggiungi</button>
         </div>
 
       </div>
@@ -47,109 +47,25 @@
 
         <!-- list -->
         <div>
-          <img src="img/frutta.png" alt="">
-          <b>Frutta e Verdura</b><i class="fa-solid fa-chevron-down"></i>
-
-          <ul>
-            <li>
-            <span>a</span>
-
-            <span>
-              <input type="checkbox" name="checkbox" id="checkbox">
-              <i class="fa-solid fa-trash-can"></i>
-            </span>
-
-            </li>
-          </ul>
-
-        </div>
-
-        <div>
-          <img src="img/carne.png" alt="">
-          <b>Carne e Pesce</b><i class="fa-solid fa-chevron-down"></i>
-
-          <ul>
-            <li>
-              <span>a</span>
-
-              <span>
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <i class="fa-solid fa-trash-can"></i>
-              </span>
-            
-            </li>
-          </ul>
-
-        </div>
-
-        <div>
-          <img src="img/pane.png" alt="">
-          <b>Panetteria e Pasta</b><i class="fa-solid fa-chevron-down"></i>
-
-          <ul>
-            <li>
-              <span>a</span>
-
-              <span>
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <i class="fa-solid fa-trash-can"></i>
-              </span>
-
-            </li>
-          </ul>
-
-        </div>
-
-        <div>
-          <img src="img/latte.png" alt="">
-          <b>Latte e Formaggi</b><i class="fa-solid fa-chevron-down"></i>
-
           
           <ul>
-            <li>
-              <span>a</span>
-
-              <span>
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <i class="fa-solid fa-trash-can"></i>
-              </span>
-
-            </li>
-          </ul>
-
-        </div>
-
-        <div>
-          <img src="img/bevande.png" alt="">
-          <b>Bevande</b><i class="fa-solid fa-chevron-down"></i>
-
-          <ul>
-            <li>
-              <span>a</span>
-
-              <span>
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <i class="fa-solid fa-trash-can"></i>
-              </span>
-
-            </li>
-          </ul>
-
-        </div>
-
-        <div>
-          <i class="fa-solid fa-x" style="color: #ff0000;"></i>
-          <b>Non Classificati</b><i class="fa-solid fa-chevron-down"></i>
-
-          <ul>
-            <li>
-              <span>a</span>
-
-              <span>
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <i class="fa-solid fa-trash-can"></i>
-              </span>
+            <li v-for="(list,index) in lists">
+              <div class="container-category">
+                <img :src="list.img">
+                <b>{{list.category}}</b>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
               
+              <div class="container-text">
+                <span>{{list.text}}</span>
+                
+                <span>
+                  <input type="checkbox" name="checkbox" id="checkbox">
+                  <i class="fa-solid fa-trash-can"></i>
+                </span>
+
+              </div>
+
             </li>
           </ul>
 
@@ -159,8 +75,8 @@
 
     </main>
 
-
   </div>
+
 
   <script src="js/script.js"></script>
   
