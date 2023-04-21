@@ -5,36 +5,57 @@ createApp({
     return{
     lists:[
       {
-        category:'Frutta e Verdura',
+        name:'Frutta e Verdura',
         img:'img/frutta.png',
-        done:false
+        done:false,
+        category:[
+          'fragole',
+
+        ]
       },
       {
-        category:'Carne e Pesce',
+        name:'Carne e Pesce',
         img:'img/carne.png',
-        done:false
+        done:false,
+        category:[
+          'petto di pollo',
+
+        ]
       },
       {
-        category:'Panetteria e Pasta',
+        name:'Panetteria e Pasta',
         img:'img/pane.png',
-        done:false
+        done:false,
+        category:[
+          'pane'
+        ]
       },
       {
-        category:'Latte e Formaggi',
+        name:'Latte e Formaggi',
         img:'img/latte.png',
-        done:false
+        done:false,
+        category:[
+          'latte parzialmente scremato'
+        ]
       },
       {
-        category:'Bevande',
+        name:'Bevande',
         img:'img/bevande.png',
-        done:false
+        done:false,
+        category:[
+          'acqua',
+        ]
       },
       {
-        category:'Non Classificati',
+        name:'Non Classificati',
         img:'img/x.jpg',
-        done:false
+        done:false,
+        category:[
+          'spugna per piatti'
+        ]
       },
     ],
+
     toDo: "",
     }
 },
@@ -46,11 +67,22 @@ addNew(){
     text: this.toDo,
     done: false
   }
+
   
-  this.lists.unshift(addNewToDo)
+  if (this.addNewToDo === this.lists.category){
+    this.lists.push(addNewToDo)
+
+  }
+
+  
   console.log(addNewToDo)
   this.toDo="";
-}
+},
+
+deleteRow(index){
+    this.lists.splice(index,1);
+
+  },
 }
 
 

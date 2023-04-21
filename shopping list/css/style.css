@@ -39,13 +39,6 @@ header{
   color: rgba(255, 255, 0, 0.947) ;
 }
 
-.container-input{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0;
-}
-
 header input{
   border: 2px solid rgba(255, 255, 0, 0.947);
   border-radius:5px;
@@ -61,6 +54,16 @@ header button{
   border-radius:5px
 }
 
+.container-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.decoration{
+  text-decoration: line-through;
+}
 /*MAIN*/
 main{
   display: flex;
@@ -85,3 +88,6 @@ main{
   color:red;
 }
 
+.icons{
+  margin: 0 20px
+}

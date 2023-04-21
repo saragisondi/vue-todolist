@@ -52,19 +52,30 @@
             <li v-for="(list,index) in lists">
               <div class="container-category">
                 <img :src="list.img">
-                <b>{{list.category}}</b>
-                <i class="fa-solid fa-chevron-down"></i>
+                <b>{{list.name}}</b>
+                <ul>
+                  
+                  <li v-for="(element,index) in list.category">
+                    
+                    <span v-if="list.done === true" class="decoration">
+                      {{element}}
+                    </span>
+                    <span v-if="list.done === false">
+                      {{element}}
+                    </span>
+                    <span>{{list.text}}</span>
+                    <span >{{list.text}}</span>
+                    <span class="icons">
+                      <input v-model.trim="list.done" type="checkbox" name="checkbox" id="checkbox">
+                      <i @click="deleteRow(index)" class="fa-solid fa-trash-can"></i>
+                    </span>
+                    
+                    
+                    
+                  </li>
+                </ul>
               </div>
               
-              <div class="container-text">
-                <span>{{list.text}}</span>
-                
-                <span>
-                  <input type="checkbox" name="checkbox" id="checkbox">
-                  <i class="fa-solid fa-trash-can"></i>
-                </span>
-
-              </div>
 
             </li>
           </ul>
