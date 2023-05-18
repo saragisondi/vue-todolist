@@ -1,0 +1,14 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "esercitazione",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "io",
+  "license": "ISC",
+  "dependencies": {
+    "luxon": "^3.3.0"
+  }
+}
